@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script>
-    <title>Document</title>
+    <script src="./app.js" defer type="module"></script>
+    <title>Visitor Guestbook</title>
 </head>
 <body>
     <main>
-        <form id="messageForm">
-            <input type="text" name="message" id="messageInput">
-            <button type="submit">Send</button>
+        <form type="text" id="messageForm">
+            <h1>Leave a comment</h1>
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Your Name">
+            <label>Your Message</label>
+            <textarea name="message" placeholder="Leave your message here"></textarea>
+            <button>Send</button>
         </form>
+
+        <div id="messageArea"></div>
     </main>
     
 </body>
