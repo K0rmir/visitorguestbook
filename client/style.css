@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+
+@media (min-width: 425px) {
+    .userArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        margin: 0.25rem;
+    }
+
+    .userArea input, textarea {
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .userArea button {
+        background-color: darkkhaki;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+
+
+}
