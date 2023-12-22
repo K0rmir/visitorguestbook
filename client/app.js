@@ -1,16 +1,16 @@
+// The below calls/fetches data from the api, turns it into JSON which is an array of objects,
+// then for each item in the array, creates a html p element for both the username, changes the text content of those p elements to
+// what the user entered using template literals and then appends/adds them to the message area.
 const messageForm = document.getElementById("messageForm");
 
 async function getMessages() {
     const response = await fetch("http://localhost:8080/messages");
     const messages = await response.json();
-    console.log(messages);
-
     for (let i = 0; i < messages.length; i++) {
         const username = messages[i].username;
         const message = messages[i].message;
         const p = document.createElement("p");
-        p.textContent = `${username}: ${message}`;
-        
+        p.textContent = `${username}: ${message}`;        
         const messageArea = document.getElementById("messageArea");
         messageArea.appendChild(p);        
     }
@@ -18,8 +18,8 @@ async function getMessages() {
 
 getMessages();
 
-// This event listener takes the submitted values from the form when submit is clicked, saves them as variables, then sends back the new values 
-// to the server to add it to the database. //
+// This event listener takes the submitted values from the form when submit is clicked, saves them as variables, 
+// then sends back the new values to the server to add it to the database. //
 messageForm.addEventListener("submit", async function(event) {
     event.preventDefault();
     const formData = new FormData(messageForm);
