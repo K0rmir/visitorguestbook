@@ -9,7 +9,7 @@ app.use(cors());
 
 // This starts/creates the server //
 app.listen(8080, function() {
-    console.log("You are now on the running server")
+    console.log("Congratulations, you just hacked the mainframe.")
 });
 
 // This is creating the homepage of the API endpoint //

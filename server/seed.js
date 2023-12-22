@@ -17,9 +17,3 @@ db.exec(`
     VALUES
     ('Kormir', 'I am you...')
 `);
-
-db.exec(`
-    INSERT INTO MESSAGES (username, message)
-    VALUES
-    ('S.o.a.d61', 'Cam can you pick me some flax plz')
-`);

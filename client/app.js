@@ -39,7 +39,5 @@ messageForm.addEventListener("submit", async function(event) {
     p.textContent = `${username}: ${message}`;
     
     const messageArea = document.getElementById("messageArea");
-    messageArea.appendChild(p);     
-
-
+    messageArea.appendChild(p);
 });
