@@ -2,31 +2,58 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: bisque;
+    background-color: #fff;
+    font-family: Arimo;
 }
 
 @media (min-width: 425px) {
     .userArea {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: fixed;
+        bottom: 0;
         gap: 3px;
-        margin: 0.25rem;
+        background-color: darkgray;
+        width: 100%;
+        height: 5%;
     }
 
     .userArea input, textarea {
         background-color: white;
         border: none;
         border-radius: 5px;
-    }
+}
 
     .userArea button {
         background-color: darkkhaki;
         border: 2px solid black;
         border-radius: 5px;
+        width: 50px;
+        margin-top: 5px;
     }
 
+    input[type="text"]::placeholder, input[type="textarea"]::placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+        line-height: inherit;
+    }
 
+    input[type="text"] {
+        width: 75px;
+    }
+
+    #messageArea p {
+        background-color: #0A7CFF;
+        color: white;
+        padding: 5px;
+        margin: 2px;
+        width: fit-content;
+        border-radius: 10px;
+
+
+    }
 
 }

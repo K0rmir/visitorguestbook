@@ -4,7 +4,7 @@
 const messageForm = document.getElementById("messageForm");
 
 async function getMessages() {
-    const response = await fetch("http://localhost:8080/messages");
+    const response = await fetch("https://visitor-guestbook-assignment.onrender.com");
     const messages = await response.json();
     for (let i = 0; i < messages.length; i++) {
         const username = messages[i].username;
@@ -24,7 +24,7 @@ messageForm.addEventListener("submit", async function(event) {
     event.preventDefault();
     const formData = new FormData(messageForm);
     const formValues = Object.fromEntries(formData);
-    const response = await fetch("http://localhost:8080/messages", {
+    const response = await fetch("https://visitor-guestbook-assignment.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
     <script src="./app.js" defer type="module"></script>
     <title>Visitor Guestbook</title>
 </head>
@@ -12,14 +15,13 @@
         <form type="text" id="messageForm">
             <h1>Leave a comment</h1>
             <div class="userArea">
-                <label>Name</label>
-                <input type="text" name="username" placeholder="Your Name">
-                <label>Message</label>
-                <textarea name="message" placeholder="Leave your message here"></textarea>
+                <label></label>
+                <input type="text" name="username" cols="5" rows="1" placeholder="Name">
+                <label></label>
+                <textarea name="message" cols="20" rows="1" placeholder="Message"></textarea>
                 <button>Send</button>
             </div>
         </form>
-
         <div id="messageArea"></div>
     </main>
     
