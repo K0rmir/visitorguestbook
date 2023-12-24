@@ -20,8 +20,8 @@ getMessages();
 
 // This event listener takes the submitted values from the form when submit is clicked, saves them as variables, 
 // then sends back the new values to the server to add it to the database. //
-messageForm.addEventListener("submit", async function(event) {
-    event.preventDefault();
+
+async function postMessage() {
     const formData = new FormData(messageForm);
     const formValues = Object.fromEntries(formData);
     const response = await fetch("https://visitor-guestbook-assignment.onrender.com/messages", { 
@@ -36,8 +36,18 @@ messageForm.addEventListener("submit", async function(event) {
     const username = formValues.username;
     const message = formValues.message;
     const p = document.createElement("p");
-    p.textContent = `${username}: ${message}`;
-    
+    p.textContent = `${username}: ${message}`;    
     const messageArea = document.getElementById("messageArea");
     messageArea.appendChild(p);
+};
+
+messageForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    postMessage();
+})
+
+window.addEventListener("keydown", function(event){
+    if (event.code === "Enter") {
+        postMessage();
+    }
 });
