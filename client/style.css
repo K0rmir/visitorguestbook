@@ -6,7 +6,7 @@
     font-family: Arimo;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 320px) {
     .userArea {
         display: flex;
         align-items: center;
@@ -31,7 +31,8 @@
 
     .userArea button {
         margin-top: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
+        margin-right: 10px;
         border: none;
     }
 
